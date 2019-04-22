@@ -1,0 +1,19 @@
+CREATE TABLE Страны (
+    ID INT PRIMARY KEY NOT NULL
+);
+CREATE TABLE Жанры (
+    ID INT PRIMARY KEY NOT NULL
+);
+CREATE TABLE Авторы (
+    ID INT PRIMARY KEY NOT NULL,
+    СтранаРождения INT REFERENCES Страны (ID)
+);
+CREATE TABLE Книги (
+    ID INT PRIMARY KEY NOT NULL,
+    Автор INT REFERENCES Авторы (ID),
+    Жанр INT REFERENCES Жанры (ID)
+);
+CREATE TABLE Магазины (
+    ID INT PRIMARY KEY NOT NULL,
+    Страна INT REFERENCES Страны (ID)
+);
