@@ -1,4 +1,4 @@
-public class Runner {
+public class OOPRunner {
     public static void main(String[] args) {
         Food.printInfo();
 
