@@ -4,51 +4,19 @@
     <meta charset="UTF-8">
     <title>TODO List</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
 <div id="main-div">
-    <h1>TODO List</h1>
+    <span id="header"><span style="font-style: italic">TODO</span>-List ✎</span>
     <div id="add-item-div">
-        <input type="text" placeholder="Введите новую задачу..." autofocus>
-        <button type="button">Добавить</button>
+        <input type="text" placeholder="Введите новую задачу..." id="text-input" autofocus>
+        <label id="new-important-label"><input type="checkbox" id="new-important-checkbox">Важная</label>
+        <button type="button" onclick="addTask()">Добавить</button>
     </div>
-    <table>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>Сделать заголовок</td>
-            <td>
-                <button>Удалить</button>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>Сделать сделать список с элементами</td>
-            <td>
-                <button>Удалить</button>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" checked></td>
-            <td>Сделать поле для ввода новых задач</td>
-            <td>
-                <button>Удалить</button>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>Сделать красиво</td>
-            <td>
-                <button>Удалить</button>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" checked></td>
-            <td>Сдать задание</td>
-            <td>
-                <button>Удалить</button>
-            </td>
-        </tr>
-    </table>
+    <h1 id="no-tasks-header">У вас нету никаких задач</h1>
+    <table id="tasks-table"></table>
 </div>
 </body>
 </html>

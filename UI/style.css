@@ -1,14 +1,31 @@
+:root {
+    --orange-light: #ffd63d;
+    --orange-dark: #dea46e;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: ghostwhite;
+}
+
+#header {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+    width: 100%;
+    background-color: var(--orange-light);
+    color: #d25414;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(170, 170, 170, 0.5);
 }
 
 #main-div {
-    width: 600px;
+    width: 700px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -16,35 +33,46 @@ body {
     align-items: center;
 }
 
-h1 {
+#add-item-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    background-color: #ffd63d;
-    color: #d25414;
-    padding: 10px 10px 10px 80px;
+    background-color: var(--orange-light);
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(170, 170, 170, 0.5);
 }
 
 button {
     border-style: none;
-    background-color: #dea46e;
+    background-color: var(--orange-dark);
     color: whitesmoke;
-    padding: 0 15px;
+    padding: 0 12px;
     font-size: 16px;
     font-weight: bolder;
     height: 40px;
 }
 
-#add-item-div {
-    width: 100%;
-    background-color: #ffd63d;
-    padding: 20px;
+button:hover, #new-important-label:hover {
+    background-color: #d49a6a;
 }
 
 input[type=text] {
     border-style: none;
-    width: 80%;
+    width: 65%;
     height: 40px;
     padding: 10px 30px;
-    font-size: 15px;
+    font-size: 18px;
+}
+
+#new-important-label {
+    margin: 0 5px;
+    padding: 2px 5px 5px 0;
+    display: inline-block;
+    width: 105px;
+    background-color: var(--orange-dark);
+    color: whitesmoke;
+    font-weight: bolder;
 }
 
 input[type=checkbox] {
@@ -55,7 +83,9 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
-    border: 1px #d25414 solid;
+    border: 2px var(--orange-light) solid;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px rgba(170, 170, 170, 0.5);
 }
 
 tr:nth-child(even) {
@@ -67,9 +97,21 @@ tr > td:nth-child(2) {
 }
 
 tr:hover {
-    background-color: #ffd760;
+    background-color: var(--orange-light);
+    text-decoration: underline;
+    cursor: pointer;
+    transform: translate(-2px, 0);
+    transition: 0.5s;
 }
 
 td {
     padding: 10px;
+}
+
+.important {
+    font-weight: bolder;
+}
+
+.completed {
+    text-decoration: line-through;
 }
